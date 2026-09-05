@@ -78,7 +78,7 @@ setTimeout(function revealFailsafe() {
 
 /* ------------------------------------------------------------
    Graceful image fallback — registered first, before anything else.
-   Until real photos land in assets/img/, hide any image that fails
+   Until real photos land in , hide any image that fails
    to load so the warm gradient behind it shows through instead of a
    broken-image icon and stray alt text.
    ------------------------------------------------------------ */
@@ -220,7 +220,7 @@ function dishHTML(d, i) {
   return `
     <article class="dish" style="animation-delay:${i * 55}ms">
       <div class="dish__img">
-        <img src="assets/img/${esc(d.img)}" alt="${esc(d.name)}"
+        <img src="${esc(d.img)}" alt="${esc(d.name)}"
              width="600" height="375" loading="lazy" decoding="async" />
       </div>
       <div class="dish__body">
