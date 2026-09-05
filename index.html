@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- Keep the title under ~60 characters. Google truncates past that, and a
+     title that ends in "…" looks broken in the results. This is 52. -->
+<title>Al Meraj Biryani — Dum Biryani in Laxmi Nagar, Delhi</title>
+<meta name="description" content="Al Meraj Biryani serves authentic dum-cooked Mughlai biryani, korma and stew in Ramesh Park, Laxmi Nagar, New Delhi. Halal. Open 9 AM – 11 PM. Call +91 98913 13266." />
+<meta name="theme-color" content="#920711" />
+
+<!--
+  BEFORE LAUNCH: replace every https://almerajbiryani.com below with the real
+  domain. Link previews (WhatsApp, Facebook) and canonical URLs need ABSOLUTE
+  urls — a relative path will not work.
+-->
+<link rel="canonical" href="https://almerajbiryani.com/" />
+
+<meta property="og:type" content="restaurant" />
+<meta property="og:site_name" content="Al Meraj Biryani" />
+<meta property="og:title" content="Al Meraj Biryani — Laxmi Nagar, Delhi" />
+<meta property="og:description" content="Slow-cooked dum biryani, Mughlai classics, halal kitchen. Open daily 9 AM – 11 PM." />
+<meta property="og:url" content="https://almerajbiryani.com/" />
+<meta property="og:image" content="https://almerajbiryani.com/assets/img/dum-pukht.jpg" />
+<meta property="og:image:alt" content="Chicken dum pukht biryani from Al Meraj Biryani" />
+<meta property="og:locale" content="en_IN" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Al Meraj Biryani — Laxmi Nagar, Delhi" />
+<meta name="twitter:description" content="Slow-cooked dum biryani, Mughlai classics, halal kitchen. Open daily 9 AM – 11 PM." />
+<meta name="twitter:image" content="https://almerajbiryani.com/assets/img/dum-pukht.jpg" />
+
+<!--
+  FAVICON — real files, not a data: URI.
+
+  Google's crawler IGNORES `data:` favicons. It needs a real, crawlable URL, or
+  the search result falls back to a blank globe. (This is also why the icon must
+  not be blocked in robots.txt.) The <link> below is what Google reads;
+  /favicon.ico at the site root is the fallback for old browsers and for
+  crawlers that never parse the HTML.
+-->
+<!-- Relative, NOT "/favicon.ico". A leading slash means "the root of the
+     origin", which is C:\ when you open the file locally and the wrong folder
+     if the site is ever served from a subdirectory. Relative paths resolve
+     against the page, so they work in both cases. -->
+<link rel="icon" href="favicon.ico" sizes="32x32" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://api.fontshare.com" />
+<!-- Tanker: the heavy condensed display face FreshBox uses. Inter: body. -->
+<link href="https://api.fontshare.com/v2/css?f[]=tanker@400&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+
+<!-- The first thing a visitor sees; fetch it without waiting for the CSS. -->
+<link rel="preload" as="image" href="assets/img/dum-pukht.jpg" />
+
+<!--
+  Structured data. This is what lets Google show the rating, hours, address and
+  phone as a rich result in local search. Every value below is verified — do not
+  add a price or a claim here that is not true on the page.
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Al Meraj Biryani",
+  "image": "https://almerajbiryani.com/assets/img/dum-pukht.jpg",
+  "url": "https://almerajbiryani.com/",
+  "telephone": "+91-98913-13266",
+  "servesCuisine": ["Mughlai", "Biryani", "Halal"],
+  "priceRange": "₹₹",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "R-226, Gali No. 10, Block N, Ramesh Park, Laxmi Nagar",
+    "addressLocality": "New Delhi",
+    "addressRegion": "Delhi",
+    "postalCode": "110092",
+    "addressCountry": "IN"
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "09:00",
+    "closes": "23:00"
+  }],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.1",
+    "reviewCount": "277",
+    "bestRating": "5"
+  },
+  "hasMap": "https://maps.google.com/?q=Al+Meraj+Biryani+Ramesh+Park+Laxmi+Nagar+Delhi",
+  "acceptsReservations": "False"
+}
+</script>
+
+<!--
+  This is what Google reads to decide the NAME printed above your search result.
+  Without it (and without a custom domain) Google falls back to the host — which
+  is why a site on foo.vercel.app shows up as "Vercel" instead of the business.
+  A site name is only granted to a DOMAIN root, so this needs the real domain to
+  take effect; it will not work on a free platform subdomain.
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Al Meraj Biryani",
+  "alternateName": "Al-Meraj Biryani, Laxmi Nagar",
+  "url": "https://almerajbiryani.com/"
+}
+</script>
+
+<script>
+  /* Runs before first paint, so nothing ever flashes.
+
+     js-on     — JS is alive, so it is safe to hide things we can reveal again.
+                 Scroll reveals become an opacity fade. Fades are motion-safe,
+                 so this is set even when the visitor asks for reduced motion.
+     js-motion — motion is actually welcome: travel, parallax, masked words.
+     is-loading — reveal the loading curtain (only ever when JS can lift it). */
+  var r = document.documentElement;
+  r.classList.add("js-on", "is-loading");
+  if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    r.classList.add("js-motion");
+  }
+</script>
+</head>
+<body>
+
+<a class="skip" href="#menu">Skip to the menu</a>
+
+<!-- Scroll progress. Driven by the user's own scrolling, so it runs even
+     under reduced motion. -->
+<div class="scrollbar" id="scrollbar" aria-hidden="true"><span></span></div>
+
+<!-- ============ LOADING SCREEN ============ -->
+<div class="loader" id="loader" role="status" aria-label="Loading">
+  <div class="loader__handi">
+    <span class="loader__steam" aria-hidden="true"><i></i><i></i><i></i></span>
+    <div class="loader__plate">
+      <img src="assets/img/dum-pukht.jpg" alt="" />
+    </div>
+    <span class="loader__ring" aria-hidden="true"></span>
+  </div>
+
+  <p class="loader__brand">Al Meraj</p>
+  <p class="loader__sub">Slow-cooked on dum&hellip;</p>
+
+  <div class="loader__bar" aria-hidden="true"><span></span></div>
+</div>
+
+<!-- ============ NAV (floating pill) ============ -->
+<header class="nav" id="nav">
+  <div class="nav__pill">
+    <a href="#top" class="brand">Al&nbsp;Meraj</a>
+
+    <nav class="nav__links" id="navLinks" aria-label="Primary">
+      <a href="#top" class="is-current">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#why">Why Us</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Visit</a>
+    </nav>
+
+    <a href="tel:+919891313266" class="btn btn--maroon magnetic nav__cta">
+      Call to Order <span class="arrow" aria-hidden="true">&#8599;</span>
+    </a>
+
+    <button class="nav__burger" id="burger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+
+  <!-- Scattered spice cut-outs. Swap the images, keep the classes.
+       Transparent PNGs work best here. -->
+  <!-- Everything decorative lives inside .scatter, which clips to the hero
+       box. The corner dishes sit at left/right: -5% deliberately, so they
+       must be inside a clipping layer or they widen the whole document and
+       the page scrolls sideways. `.hero` itself cannot clip — the plate has
+       to hang out of its bottom edge. -->
+  <div class="scatter" aria-hidden="true">
+    <img class="scatter__item s1" src="assets/img/scatter-chilli.png" alt="" />
+    <img class="scatter__item s2" src="assets/img/scatter-mint.png" alt="" />
+    <img class="scatter__item s3" src="assets/img/scatter-star-anise.png" alt="" />
+    <img class="scatter__item s4" src="assets/img/scatter-cardamom.png" alt="" />
+    <img class="scatter__item s5" src="assets/img/scatter-saffron.png" alt="" />
+    <img class="scatter__item s6" src="assets/img/scatter-bayleaf.png" alt="" />
+
+    <!-- Corner dishes, like FreshBox's salad + pizza bowls. Wrapped in a div
+         so the gradient circle survives if the photo is missing. -->
+    <div class="hero__corner hero__corner--l">
+      <img src="assets/img/korma.jpg" alt="" />
+    </div>
+    <div class="hero__corner hero__corner--r">
+      <img src="assets/img/mutton-korma.jpg" alt="" />
+    </div>
+  </div>
+
+  <div class="hero__inner reveal">
+    <p class="dotline">&bull; Fresh &bull; Halal &bull; Dum-Cooked</p>
+
+    <h1 class="display display--xl" data-split>
+      The biryani that Delhi<br />
+      keeps coming back for
+    </h1>
+
+    <div class="hero__cta">
+      <a href="#menu" class="btn btn--yellow btn--lg magnetic">See the Menu</a>
+      <a href="tel:+919891313266" class="btn btn--outline-light btn--lg magnetic">
+        <span class="btn__ring" aria-hidden="true"></span>
+        +91 98913 13266
+      </a>
+    </div>
+  </div>
+
+  <!-- The dish, straddling the wave. Auto-advancing carousel; the circle
+       is a CSS mask, so slides are plain square photos. -->
+  <figure class="hero__dish" data-speed="0.18">
+    <div class="hero__slider">
+      <!-- Slides sit on one horizontal track that scrolls left. motion.js
+           clones the first slide onto the end so the loop is seamless. -->
+      <div class="hero__track" id="heroTrack">
+        <div class="hero__slide"><img src="assets/img/dum-pukht.jpg" alt="Chicken dum pukht biryani" loading="eager" /></div>
+        <div class="hero__slide"><img src="assets/img/mutton-biryani.jpg" alt="Mutton biryani" loading="lazy" /></div>
+        <div class="hero__slide"><img src="assets/img/muradabadi.jpg" alt="Chicken muradabadi biryani" loading="lazy" /></div>
+        <div class="hero__slide"><img src="assets/img/masala-biryani.jpg" alt="Chicken biryani masale wali" loading="lazy" /></div>
+      </div>
+    </div>
+    <div class="hero__dots" id="heroDots" role="group" aria-label="Featured dishes"></div>
+  </figure>
+
+  <!-- Cream wave divider: four full sine waves across the width.
+       Endpoints sit ON the crests (y=20) and troughs (y=100), with
+       horizontal control points — put the controls between those values
+       and the curve never reaches them, giving a nearly flat line. -->
+  <svg class="wave" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,100
+             C 60,100 120,20 180,20 C 240,20 300,100 360,100
+             C 420,100 480,20 540,20 C 600,20 660,100 720,100
+             C 780,100 840,20 900,20 C 960,20 1020,100 1080,100
+             C 1140,100 1200,20 1260,20 C 1320,20 1380,100 1440,100
+             L1440,120 L0,120 Z" />
+  </svg>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="stats reveal">
+  <ul class="stats__row">
+    <li><strong data-count="4.1" data-suffix="&#9733;">4.1&#9733;</strong><span>277 reviews on Google</span></li>
+    <li><strong data-count="400" data-prefix="&#8377;">&#8377;400</strong><span>average cost for two</span></li>
+    <li><strong>9&ndash;11</strong><span>open daily, AM to PM</span></li>
+    <li><strong data-count="100" data-suffix="%">100%</strong><span>halal certified kitchen</span></li>
+  </ul>
+</section>
+
+<!-- ============ CATEGORY TICKER ============ -->
+<section class="cats">
+  <header class="sec-head reveal">
+    <p class="dotline dotline--dark">&bull; Categories</p>
+    <h2 class="display display--md" data-split>Explore our popular dishes</h2>
+    <p class="sec-head__sub">
+      Six biryanis and four Mughlai curries &mdash; every one cooked in batches
+      through the day, never reheated.
+    </p>
+  </header>
+
+  <div class="ticker" aria-hidden="true">
+    <!-- Content is duplicated once; motion.js wraps at half the track width. -->
+    <div class="ticker__track" data-marquee data-marquee-speed="0.045">
+      <span class="cat"><i><img src="assets/img/thumb/dum-pukht.jpg" alt="" width="320" height="260" loading="lazy" decoding="async" /></i>Dum Pukht</span>
+      <span class="cat"><i><img src="assets/img/thumb/mutton-biryani.jpg" alt="" width="320" height="260" loading="lazy" decoding="async" /></i>Mutton Biryani</span>
+      <span class="cat"><i><img src="assets/img/thumb/fish-biryani.jpg" alt="" width="320" height="260" loading="lazy" decoding="async" /></i>Fish Biryani</span>
+      <span class="cat"><i><img src="assets/img/thumb/masala-biryani.jpg" alt="" width="320" height="260" loading="lazy" decoding="async" /></i>Masale Wali</span>
+      <span class="cat"><i><img src="assets/img/thumb/veg-biryani.jpg" alt="" width="320" height="260" loading="lazy" decoding="async" /></i>Matar Pulao</span>
+      <span class="cat"><i><img src="assets/img/thumb/muradabadi.jpg" alt="" width="320" height="260" loading="lazy" decoding="async" /></i>Muradabadi</span>
+      <span class="cat"><i><img src="assets/img/thumb/korma.jpg" alt="" width="320" height="260" loading="lazy" decoding="async" /></i>Chicken Korma</span>
+      <span class="cat"><i><img src="assets/img/thumb/kali-mirch.jpg" alt="" width="320" height="260" loading="lazy" decoding="async" /></i>Kali Mirch</span>
+      <span class="cat"><i><img src="assets/img/thumb/stew.jpg" alt="" width="320" height="260" loading="lazy" decoding="async" /></i>Chicken Ishtu</span>
+      <span class="cat"><i><img src="assets/img/thumb/mutton-korma.jpg" alt="" width="320" height="260" loading="lazy" decoding="async" /></i>Mutton Korma</span>
+
+      <span class="cat"><i><img src="assets/img/thumb/dum-pukht.jpg" alt="" width="320" height="260" loading="lazy" decoding="async" /></i>Dum Pukht</span>
+      <span class="cat"><i><img src="assets/img/thumb/mutton-biryani.jpg" alt="" width="320" height="260" loading="lazy" decoding="async" /></i>Mutton Biryani</span>
+      <span class="cat"><i><img src="assets/img/thumb/fish-biryani.jpg" alt="" width="320" height="260" loading="lazy" decoding="async" /></i>Fish Biryani</span>
+      <span class="cat"><i><img src="assets/img/thumb/masala-biryani.jpg" alt="" width="320" height="260" loading="lazy" decoding="async" /></i>Masale Wali</span>
+      <span class="cat"><i><img src="assets/img/thumb/veg-biryani.jpg" alt="" width="320" height="260" loading="lazy" decoding="async" /></i>Matar Pulao</span>
+      <span class="cat"><i><img src="assets/img/thumb/muradabadi.jpg" alt="" width="320" height="260" loading="lazy" decoding="async" /></i>Muradabadi</span>
+      <span class="cat"><i><img src="assets/img/thumb/korma.jpg" alt="" width="320" height="260" loading="lazy" decoding="async" /></i>Chicken Korma</span>
+      <span class="cat"><i><img src="assets/img/thumb/kali-mirch.jpg" alt="" width="320" height="260" loading="lazy" decoding="async" /></i>Kali Mirch</span>
+      <span class="cat"><i><img src="assets/img/thumb/stew.jpg" alt="" width="320" height="260" loading="lazy" decoding="async" /></i>Chicken Ishtu</span>
+      <span class="cat"><i><img src="assets/img/thumb/mutton-korma.jpg" alt="" width="320" height="260" loading="lazy" decoding="async" /></i>Mutton Korma</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MENU (crimson) ============ -->
+<section class="menu section--red" id="menu">
+  <div class="wrap">
+    <header class="menu__head reveal">
+      <div>
+        <p class="dotline">&bull; Our Menu</p>
+        <h2 class="display display--md" data-split>Discover flavors you'll love</h2>
+        <p class="sec-head__sub sec-head__sub--light">
+          Biryani is cooked in batches through the day &mdash; ask for the next
+          handi if your favourite has just sold out.
+        </p>
+      </div>
+      <a href="tel:+919891313266" class="btn btn--maroon magnetic">
+        Reserve a Handi <span class="arrow" aria-hidden="true">&#8599;</span>
+      </a>
+    </header>
+
+    <!-- Only the categories that exist on the shop's menu board. -->
+    <div class="tabs reveal" role="tablist" aria-label="Menu categories" id="tabs">
+      <button class="tab is-active" type="button" role="tab" id="tab-biryani"
+              data-cat="biryani" aria-selected="true" aria-controls="menuGrid">Biryani</button>
+      <button class="tab" type="button" role="tab" id="tab-curries"
+              data-cat="curries" aria-selected="false" aria-controls="menuGrid">Korma &amp; Curries</button>
+    </div>
+
+    <!-- aria-labelledby is kept in sync with the active tab by script.js -->
+    <div class="menu__grid" id="menuGrid" role="tabpanel" aria-labelledby="tab-biryani" tabindex="0"></div>
+
+    <p class="menu__note reveal">Prices are indicative and inclusive of taxes. Availability varies through the day.</p>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="about section" id="about">
+  <div class="wrap about__inner">
+    <div class="about__art reveal reveal--left">
+      <div class="about__blob" data-speed="0.2">
+        <img src="assets/img/kitchen.jpg" alt="Handi of biryani being sealed with dough" loading="lazy" />
+      </div>
+      <span class="about__sparks" aria-hidden="true"></span>
+    </div>
+
+    <div class="about__copy reveal reveal--right reveal--delay">
+      <p class="dotline dotline--dark">&bull; About Us</p>
+      <h2 class="display display--md" data-split>Exceptional experience with premium quality, rich flavors</h2>
+      <p>
+        Al Meraj started as a small counter on Gali No. 10 with one handi, one
+        recipe, and a queue that formed before the lid ever came off. We never
+        changed the recipe. We just got a bigger handi.
+      </p>
+
+      <h3 class="about__hours-label">Opening Hours</h3>
+      <div class="hours">
+        <span>Monday &ndash; Sunday</span>
+        <strong>9:00 AM &ndash; 11:00 PM</strong>
+      </div>
+
+      <ul class="ticks">
+        <li>Hand-ground whole spices, roasted daily</li>
+        <li>Aged long-grain basmati, never broken</li>
+        <li>Halal meat from trusted local suppliers</li>
+        <li>Sealed-pot dum cooking &mdash; nothing microwaved</li>
+      </ul>
+
+      <a href="#visit" class="btn btn--red magnetic">
+        Find the Shop <span class="arrow" aria-hidden="true">&#8599;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY (crimson) ============ -->
+<section class="why section--red" id="why">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="dotline">&bull; Why Choose Us</p>
+      <h2 class="display display--md" data-split>Loved by biryani lovers</h2>
+      <p class="sec-head__sub sec-head__sub--light">
+        Four hundred years of technique, served in twenty minutes.
+      </p>
+    </header>
+
+    <div class="why__grid">
+      <article class="card reveal">
+        <div class="card__icon">&#9737;</div>
+        <h3>Sealed-Pot Dum</h3>
+        <p>The handi is closed with dough so no steam escapes. The rice cooks in the meat's own aroma.</p>
+      </article>
+      <article class="card reveal reveal--delay">
+        <div class="card__icon">&#9752;</div>
+        <h3>Spices Ground Daily</h3>
+        <p>Whole cloves, mace, black cardamom and shahi jeera, roasted and ground each morning.</p>
+      </article>
+      <article class="card reveal reveal--delay-2">
+        <div class="card__icon">&#10022;</div>
+        <h3>Halal &amp; Traceable</h3>
+        <p>Meat from local halal suppliers we have used since we opened, delivered fresh each day.</p>
+      </article>
+      <article class="card reveal reveal--delay-3">
+        <div class="card__icon">&#9201;</div>
+        <h3>Cooked in Batches</h3>
+        <p>We would rather sell out than serve a reheated plate. Fresh handis go on right until close.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="reviews section" id="reviews">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="dotline dotline--dark">&bull; Testimonials</p>
+      <h2 class="display display--md" data-split>What Delhi says</h2>
+    </header>
+
+    <!-- ---- Google reviews widget ---- -->
+    <div class="gr reveal reveal--zoom">
+
+      <div class="gr__head">
+        <span class="gr__logo" aria-hidden="true">
+          <svg viewBox="0 0 48 48">
+            <path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2 5-4.4 6.6v5.5h7.1c4.1-3.8 6.6-9.4 6.6-16.1z"/>
+            <path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.4 2.1-5.7 0-10.5-3.8-12.2-9H4.5v5.7C8.1 41.1 15.4 46 24 46z"/>
+            <path fill="#FBBC05" d="M11.8 28.2c-.4-1.3-.7-2.7-.7-4.2s.2-2.9.7-4.2v-5.7H4.5C2.9 17.3 2 20.5 2 24s.9 6.7 2.5 9.9l7.3-5.7z"/>
+            <path fill="#EA4335" d="M24 10.8c3.2 0 6.1 1.1 8.4 3.3l6.3-6.3C34.9 4.2 29.9 2 24 2 15.4 2 8.1 6.9 4.5 14.1l7.3 5.7c1.7-5.2 6.5-9 12.2-9z"/>
+          </svg>
+        </span>
+
+        <!-- The rating, stars and count are written by reviews.js from
+             GOOGLE_SUMMARY. The values here are only a no-JS fallback. -->
+        <div class="gr__summary">
+          <strong>Al Meraj Biryani</strong>
+          <div class="gr__rating">
+            <b id="grRating">4.1</b>
+            <span class="gr__stars" id="grHeadStars" aria-label="Rated 4.1 out of 5"></span>
+          </div>
+          <a href="https://share.google/ud9h8lkdHBnzAoQrT" target="_blank" rel="noopener">
+            Based on <span id="grCount">277</span> Google reviews
+          </a>
+        </div>
+
+        <a href="https://share.google/ud9h8lkdHBnzAoQrT" target="_blank" rel="noopener" class="btn btn--red gr__write magnetic">
+          Write a review <span class="arrow" aria-hidden="true">&#8599;</span>
+        </a>
+      </div>
+
+      <div class="gr__carousel">
+        <button class="gr__arrow gr__arrow--prev" id="grPrev" aria-label="Previous reviews">&#8249;</button>
+        <div class="gr__viewport">
+          <div class="gr__track" id="grTrack"></div>
+        </div>
+        <button class="gr__arrow gr__arrow--next" id="grNext" aria-label="Next reviews">&#8250;</button>
+      </div>
+
+      <p class="gr__foot">
+        <span>Powered by</span>
+        <svg class="gr__wordmark" viewBox="0 0 74 24" aria-label="Google">
+          <path fill="#4285F4" d="M9.24 11.02v2.3h5.5c-.16 1.3-.6 2.24-1.26 2.9-.8.8-2.06 1.7-4.24 1.7-3.38 0-6.02-2.72-6.02-6.1s2.64-6.1 6.02-6.1c1.82 0 3.16.72 4.14 1.64l1.62-1.62C13.64 4.42 11.8 3.4 9.24 3.4 4.6 3.4.7 7.18.7 11.82s3.9 8.42 8.54 8.42c2.5 0 4.4-.82 5.88-2.36 1.52-1.52 2-3.66 2-5.38 0-.54-.04-1.02-.12-1.42H9.24z"/>
+          <path fill="#EA4335" d="M25.3 9.28c-3 0-5.44 2.28-5.44 5.42 0 3.12 2.44 5.42 5.44 5.42 3 0 5.44-2.3 5.44-5.42 0-3.14-2.44-5.42-5.44-5.42zm0 8.7c-1.64 0-3.06-1.36-3.06-3.28 0-1.94 1.42-3.28 3.06-3.28s3.06 1.34 3.06 3.28c0 1.92-1.42 3.28-3.06 3.28z"/>
+          <path fill="#FBBC05" d="M37.2 9.28c-3 0-5.44 2.28-5.44 5.42 0 3.12 2.44 5.42 5.44 5.42 3 0 5.44-2.3 5.44-5.42 0-3.14-2.44-5.42-5.44-5.42zm0 8.7c-1.64 0-3.06-1.36-3.06-3.28 0-1.94 1.42-3.28 3.06-3.28s3.06 1.34 3.06 3.28c0 1.92-1.42 3.28-3.06 3.28z"/>
+          <path fill="#4285F4" d="M53.6 9.6v.88h-.08c-.54-.64-1.56-1.2-2.86-1.2-2.72 0-5.2 2.38-5.2 5.44 0 3.04 2.48 5.4 5.2 5.4 1.3 0 2.32-.58 2.86-1.24h.08v.78c0 2.08-1.1 3.18-2.88 3.18-1.46 0-2.36-1.04-2.72-1.92l-2.08.86c.6 1.44 2.18 3.2 4.8 3.2 2.78 0 5.14-1.64 5.14-5.64V9.6H53.6zm-2.74 8.38c-1.64 0-3.02-1.38-3.02-3.26 0-1.92 1.38-3.3 3.02-3.3 1.62 0 2.9 1.4 2.9 3.3 0 1.88-1.28 3.26-2.9 3.26z"/>
+          <path fill="#34A853" d="M57.6 3.96h2.36v16.06H57.6z"/>
+          <path fill="#EA4335" d="M67.3 17.98c-1.22 0-2.08-.56-2.64-1.64l7.26-3-.24-.62c-.46-1.22-1.84-3.44-4.66-3.44-2.8 0-5.12 2.2-5.12 5.42 0 3.04 2.3 5.42 5.38 5.42 2.48 0 3.92-1.52 4.52-2.4l-1.84-1.24c-.62.9-1.46 1.5-2.66 1.5zm-.18-6.76c.96 0 1.78.5 2.06 1.2l-4.92 2.04c-.06-2.14 1.62-3.24 2.86-3.24z"/>
+        </svg>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA (crimson) ============ -->
+<section class="cta section--red">
+  <div class="wrap cta__inner reveal">
+    <h2 class="display display--md" data-split>Hungry now? The handi is already open</h2>
+    <p>Call ahead and we will have it packed and hot by the time you reach.</p>
+    <div class="cta__btns">
+      <a href="tel:+919891313266" class="btn btn--yellow btn--lg magnetic">+91 98913 13266</a>
+      <a href="https://maps.google.com/?q=Al+Meraj+Biryani+Ramesh+Park+Laxmi+Nagar+Delhi" target="_blank" rel="noopener" class="btn btn--outline-light btn--lg magnetic">
+        Get Directions <span class="arrow" aria-hidden="true">&#8599;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VISIT ============ -->
+<section class="visit section" id="visit">
+  <div class="wrap visit__inner">
+    <div class="visit__copy reveal reveal--left">
+      <p class="dotline dotline--dark">&bull; Find Us</p>
+      <h2 class="display display--md" data-split>Gali No. 10, Ramesh Park</h2>
+
+      <dl class="info">
+        <div>
+          <dt>Address</dt>
+          <dd>R-226, Gali No. 10, Block N,<br />Ramesh Park, Laxmi Nagar,<br />New Delhi &ndash; 110092</dd>
+        </div>
+        <div>
+          <dt>Hours</dt>
+          <dd>Monday &ndash; Sunday<br /><strong>9:00 AM &ndash; 11:00 PM</strong></dd>
+        </div>
+        <div>
+          <dt>Phone</dt>
+          <dd><a href="tel:+919891313266">+91 98913 13266</a></dd>
+        </div>
+        <div>
+          <dt>Good to know</dt>
+          <dd>Dine-in &middot; Takeaway &middot; Home delivery &middot; Halal</dd>
+        </div>
+      </dl>
+
+      <a href="https://maps.google.com/?q=Al+Meraj+Biryani+Ramesh+Park+Laxmi+Nagar+Delhi" target="_blank" rel="noopener" class="btn btn--red btn--lg magnetic">
+        Open in Google Maps <span class="arrow" aria-hidden="true">&#8599;</span>
+      </a>
+    </div>
+
+    <div class="visit__map reveal reveal--right reveal--delay">
+      <iframe
+        title="Map to Al Meraj Biryani, Ramesh Park, Laxmi Nagar"
+        src="https://maps.google.com/maps?q=Al%20Meraj%20Biryani%20Ramesh%20Park%20Laxmi%20Nagar%20Delhi&t=&z=15&ie=UTF8&iwloc=&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div class="footer__brand">
+      <a href="#top" class="brand brand--footer">Al&nbsp;Meraj</a>
+      <p>Authentic Mughlai biryani, slow-cooked on dum and served in Laxmi Nagar since day one.</p>
+    </div>
+
+    <nav class="footer__col" aria-label="Footer">
+      <h4>Explore</h4>
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#why">Why us</a>
+      <a href="#visit">Visit</a>
+    </nav>
+
+    <div class="footer__col">
+      <h4>Order</h4>
+      <a href="tel:+919891313266">Call +91 98913 13266</a>
+      <a href="https://www.zomato.com/ncr/al-meraj-biryani-1-laxmi-nagar-new-delhi" target="_blank" rel="noopener">Zomato</a>
+      <a href="https://magicpin.in/New-Delhi/Laxmi-Nagar/Restaurant/Al-Meraj-Biryani/store/5b131a/menu" target="_blank" rel="noopener">magicpin</a>
+      <a href="https://www.district.in/dining/ncr/al-meraj-biryani-1-laxmi-nagar-new-delhi" target="_blank" rel="noopener">District</a>
+    </div>
+
+    <div class="footer__col">
+      <h4>Visit</h4>
+      <p class="footer__addr">
+        R-226, Gali No. 10, Block N,<br />
+        Ramesh Park, Laxmi Nagar,<br />
+        New Delhi &ndash; 110092
+      </p>
+      <p class="footer__addr">Open daily, 9 AM &ndash; 11 PM</p>
+    </div>
+  </div>
+
+  <div class="wrap footer__bar">
+    <p>&copy; <span id="year"></span> Al Meraj Biryani. All rights reserved.</p>
+    <p>Halal kitchen &middot; Laxmi Nagar, New Delhi</p>
+  </div>
+</footer>
+
+<!-- ============ MOBILE ACTION BAR ============
+     Phones are where the orders come from, and the header CTA scrolls away.
+     This does not. Hidden on desktop. -->
+<div class="actionbar" aria-label="Quick actions">
+  <a href="tel:+919891313266" class="actionbar__btn actionbar__btn--call">
+    <span aria-hidden="true">&#9990;</span> Call to Order
+  </a>
+  <a href="https://wa.me/919891313266?text=Assalamualaikum%2C%20I%20would%20like%20to%20order%20biryani%20from%20Al%20Meraj."
+     target="_blank" rel="noopener" class="actionbar__btn actionbar__btn--wa">
+    <span aria-hidden="true">&#128172;</span> WhatsApp
+  </a>
+  <a href="https://maps.google.com/?q=Al+Meraj+Biryani+Ramesh+Park+Laxmi+Nagar+Delhi"
+     target="_blank" rel="noopener" class="actionbar__btn actionbar__btn--map" aria-label="Directions">
+    <span aria-hidden="true">&#9906;</span>
+  </a>
+</div>
+
+<script src="script.js"></script>
+<script src="reviews.js"></script>
+<script src="motion.js"></script>
+</body>
+</html>

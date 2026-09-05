@@ -1,0 +1,21 @@
+# robots.txt — Al Meraj Biryani
+#
+# BEFORE LAUNCH: change the Sitemap line below to your real domain.
+# It must be an absolute URL, and it must match the property you verified in
+# Google Search Console exactly (https vs http, www vs non-www).
+
+User-agent: *
+Allow: /
+
+# The favicon MUST stay crawlable. If Google cannot fetch it, the search result
+# shows a blank globe instead of your icon. Stated explicitly so nobody blocks
+# it later with a broad rule.
+Allow: /favicon.ico
+Allow: /favicon.svg
+Allow: /apple-touch-icon.png
+
+# The original full-resolution photos are kept for re-editing. They are not
+# part of the site and there is no reason for Google to crawl or index them.
+Disallow: /assets/source/
+
+Sitemap: https://almerajbiryani.com/sitemap.xml

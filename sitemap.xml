@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Sitemap for Google Search Console.
+
+  BEFORE YOU SUBMIT THIS: replace https://almerajbiryani.com/ below with your
+  real domain. Search Console rejects a sitemap whose URLs are not on the exact
+  property you verified — including http vs https and www vs non-www. They must
+  match character for character.
+
+  This is a single-page site, so there is one URL. The #menu and #visit anchors
+  are NOT separate entries: Google treats a fragment as the same page, and
+  listing them would just be noise.
+
+  Update <lastmod> when you make a real content change (new prices, new dishes).
+  Do not touch it for cosmetic edits — an inflated lastmod on an unchanged page
+  is a quality signal you do not want to send.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://almerajbiryani.com/</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>
